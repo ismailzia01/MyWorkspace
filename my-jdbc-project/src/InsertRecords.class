@@ -1,0 +1,26 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
+public class InsertRecords {
+   public InsertRecords() {
+   }
+
+   public static void main(String[] var0) throws Exception {
+      try {
+         Class.forName("com.mysql.cj.jdbc.Driver");
+         String var3 = "jdbc:mysql://localhost:3306/DBMS_LAB";
+         Connection var1 = DriverManager.getConnection(var3, "root", "password");
+         String var4 = "insert into students values(1, 'R','E','N',100,'A')";
+         Statement var2 = var1.createStatement();
+         var2.executeUpdate(var4);
+         System.out.println("Record Inserted");
+         var2.close();
+         var1.close();
+      } catch (Exception var6) {
+         System.out.println("** Error on data select. ** " + String.valueOf(var6));
+      }
+
+   }
+}
