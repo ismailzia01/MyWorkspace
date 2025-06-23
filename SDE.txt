@@ -1,0 +1,103 @@
+Software Development Engineer
+
+1) Programming Language
+    pick a programming language
+    C++, JAVA, or Python ,
+    
+    Variables 
+    loops
+    functions
+    object oriented programming
+    encapsulation 
+    Exception Handling
+    STL(if C++) Collections(if JAVA)
+
+2) Data Structures & Algorithms
+
+    DS
+    
+    Arrays
+    String
+    Stack
+    Queue
+    Linked Lists
+    HashMap, HashSet
+    Binary Tree
+    BST
+    Heap, Priority Queue
+    Graphs (BFS, DFS)
+
+    Algos
+
+    Sorting
+    Recursion + Backtracking
+    Binary Search
+    Two pointers
+    Sliding Window
+    Greedy 
+    Dynamic Programming (Knapsack, LIS, LCS)
+    Union Find(Disjoint Set)
+
+3) System Design
+
+    High Level Design
+    (Monolith vs Microservices)
+    Component Diagram
+    Data flow Diagram
+    API gateway & Routing
+    Caching (Redis , Memchached)
+    Load Balancer
+
+    Low level Design
+    Class Diagram(UML)
+    Object Oriented Design
+    Design patterns
+
+4) Databases
+
+    SQL
+    CRUD(Select, insert, update, delete)
+    Joins(inner, left, right, full)
+    Group by , having , subqueries
+    indexing , normalization
+
+    No Sql
+    Document(e.g. mongoDB)
+    key-value(e.h.redis)
+    Differences between sql and nosql
+    CAP theorem
+
+5) Operatin System
+
+    Processes & Threads
+    CPU Scheduling
+    IPC
+    Deadlock
+    Process Synchronization
+    Memory Management
+    Virtual Memory
+    File System & Allocation methods
+
+6) Computer Networks
+
+    OSI Model(7 Layer)
+    TCP/IP Model
+    IP Addressing
+    TCP vs UDP
+    Routing & Switching
+    DNS, DHCP, HTTP/HTTPS, FTP
+    MAC Address & ARP
+    Socket Programming Basics
+
+Projects 
+    Good Project Checklist
+    Uses Frontend + Backend + Database
+    Has Authentication (login/signup)
+    Hosted  Live(Render , Vercel, Netify)
+    Uses api(Rest, GraphQL)
+
+    Suggested Projects
+    
+
+
+    
