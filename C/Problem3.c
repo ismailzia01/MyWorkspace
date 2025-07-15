@@ -9,7 +9,7 @@ Then dynamically store multiple lines in an array using realloc().
 
 typedef struct {
     char *text;
-    int length;;
+    int length;
 }Line;
 
 int main() {
