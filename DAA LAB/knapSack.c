@@ -52,7 +52,6 @@ int main() {
         printf("%d ", weight[i]);
     for(int i = 0; i < n; i++)
         pw[i] = profit[i] / weight[i];
-    printf("\nProfit : %f \n
-        ", greedyKnapSack(n, m));
+    printf("\nProfit : %f \n", greedyKnapSack(n, m));
     return 0;
 }
