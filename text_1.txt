@@ -1,0 +1,7 @@
+write an algorithm for 
+1) Binary Search
+2) Merge Sort
+3) Quick Sort
+4) Prims Algorithm
+5) Kruskal Algorithm
+6) Dijkstras Algorithm

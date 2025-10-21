@@ -25,7 +25,7 @@ int main() {
     arr = (int*)malloc(capacity *sizeof(int));
 
 
-    while (scanf("%d", &input) == 1) {
+    while (scanf("%d", &input) == 1 && input != -1) {
         if (size >= capacity) {
             capacity *= 2;
             arr = (int*)realloc(arr, capacity * sizeof(int));
