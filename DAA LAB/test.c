@@ -1,39 +1,56 @@
 #include<stdio.h>
-void prims(int n, int cost[10][10]) {
-    int v, u, min, mincost = 0, visited[10] = {0};
-    visited[0] = 1;
-    min = 999;
-    for(int i = 0; i < n; i++) {
-        min = 999;
-        for(int j = 0; j < n; j++) {
-            if(cost[i][j] < min) {
-                min = cost[i][j];
-                u = i;
-                v = j;
-            } 
-        }
-        if(visited[v]==0) {
-            mincost += min;
-            visited[v] = 1;
-        }
-        cost[u][v] = cost [v][u] = 999;
-    }
-    printf("\nMinimum cost is %d ", mincost);
+
+int parant[10];
+
+int find(int i) {
+    while(parant[i] != i)
+        i = parant[i];
+    return i;
 }
-void main() {
-    int n = 3, cost[10][10] = {{0, 5, 10}, {5, 0, 5}, {10, 5, 0}};
-    for(int i = 0; i < n; i++) {
-        printf("\n");
+
+void uni(int i, int j) {
+    int a = find(i);
+    int b = find(j);
+    parant[a] = b;
+}
+
+int main() {
+    int n, e;
+    int s, d, w;
+    int min, total_cost = 0;
+    int cost[10][10];
+    int u , v;
+
+    printf("enter no. of nodes : ");
+    for(int i = 0; i<n; i++) {
         for(int j = 0; j < n; j++) {
-            printf("%d ", cost[i][j]);
-            if(cost[i][j]==0) cost[i][j] = 999;
+            scanf("%d", &cost[i][j]);
+            if(cost[i][j]==0)
+                cost[i][j] = 999;
         }
     }
-    printf("\n\n");
     for(int i = 0; i < n; i++) {
-        for(int j = 0; j < n; j++) 
-            printf("%d ", cost[i][j]);
-        printf("\n");
+        parant[i] = i;
     }
-    prims(n, cost);
+    e=0;
+    while(e < n-1) {
+        min = 999;
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j <n; j++) {
+                if(find(i) != find(j) && cost[i][j] < min){
+                    min = cost[i][j];
+                    s = i;
+                    d = j;
+                }
+            }
+        }
+    
+        uni(s, d);
+        printf("%d -> %d cost %d", s, d, min);
+        total_cost += min;
+        cost[s][d] = cost[d][s] = 999;
+        e++;
+    }
+    printf("MAx profit %d ", total_cost);
+    return 0;
 }
