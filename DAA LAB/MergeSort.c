@@ -5,7 +5,7 @@ void Merge(int low, int mid, int high, int arr[]) {
     int i = low, k = 0, j = mid + 1;
     int *brr = malloc((high - low + 1) * sizeof(int));
     while(i <= mid  && j <= high) {
-        if(arr[i] < arr[j])
+        if(arr[i] <= arr[j])
             brr[k++] = arr[i++];
         else
             brr[k++] = arr[j++];
